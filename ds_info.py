@@ -71,21 +71,3 @@ def find_attr_max_gain_ratio(target_name, df: pd.DataFrame):
                 main_attribute = (col, attr_gain_ratio)
 
     return main_attribute[0]
-
-
-def find_main_attribute_for_price(df: pd.DataFrame):
-    df['Price'] = pd.cut(df['Price'], [0, 15000, 25000, np.inf], labels=['budget', 'medium', 'expensive'])
-
-    df['Processor_Speed'] = pd.cut(df['Processor_Speed'],
-                                   [1.5, 2.0, 2.5, 3.0, 3.5, 4.0],
-                                   labels=['1.5-2.0', '2.0-2.5', '2.5-3.0', '3.0-3.5', '3.5-4.0'])
-
-    df['Storage_Capacity'] = pd.cut(df['Storage_Capacity'], [0, 350, 600, 1000], labels=['Small', 'Medium', 'Large'])
-
-    df['Screen_Size'] = pd.cut(df['Screen_Size'], [11, 14, 16, 17], labels=['Small', 'Medium', 'Large'])
-
-    df['Weight'] = convert_num_by_sturges('Weight', df)
-
-    main_attribute = find_attr_max_gain_ratio('Price', df)
-
-    return main_attribute
