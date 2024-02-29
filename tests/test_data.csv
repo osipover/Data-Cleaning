@@ -1,0 +1,11 @@
+CGPA,Job Offer,Interactive,Practical Knowledge,Comm Skills
+>=9,Yes,Yes,Very good,Good
+>=8,Yes,No,Good,Moderate
+>=9,No,No,Average,Poor
+<8,No,No,Average,Good
+>=8,Yes,Yes,Good,Moderate
+>=9,Yes,Yes,Good,Moderate
+<8,No,Yes,Good,Poor
+>=9,Yes,No,Very good,Good
+>=8,Yes,Yes,Good,Good
+>=8,Yes,Yes,Average,Good
